@@ -1,0 +1,20 @@
+use ids1db;
+desc childmor;
+select * from childmor;
+select avg(Underiv) from childmor;
+select avg(Neonemor) from childmor;
+select avg(Infantmor) from childmor;
+set sql_safe_updates=0;
+update childmor set underiv=69.2 where underiv=0;
+update childmor set neonemor=28 where neonemor=0;
+update childmor set infantmor=48.6 where infantmor=43.65;
+
+select * from childmor;
+select max(infantmor),min(infantmor) from childmor;
+select Year  from childmor where neonemor>=27.67;
+select infantmor from childmor order by infantmor desc;
+select min(underiv) as underiv_min,max(underiv) as underiv_max,avg(underiv) as underiv_avg, variance(underiv) as underiv_var from childmor;
+select min(infantmor) as inf_min,max(infantmor) as inf_max,avg(infantmor) as inf_avg ,variance(infantmor) as inf_var from childmor;
+select min(neonemor) as neo_min,max(neonemor) as neo_max,avg(neonemor) as neo_avg,variance(neonemor) as neo_var from childmor;
+alter table childmor add column Abovefive double;
+select * from childmor;
